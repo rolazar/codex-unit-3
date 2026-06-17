@@ -37,3 +37,4 @@ Named exports and imports allow code to be accessed by the same variable name fr
 ## Hints
 
 - Multiple named exports are allowed per file.
+- An `index` file is usually the entry point that brings all files together.
