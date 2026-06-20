@@ -22,8 +22,9 @@ Knowing the difference between NodeJS and JavaScript will help you understand wh
 
 ## Usage Tips
 
-- Use `localStorage.setItem` to store a value.
-- `setItem` is a function that accepts a key and value.
+- Use `localStorage` to store values in the browser and retrieve them.
+- `setItem` is a method that accepts a key and value. Example: `localStorage.setItem("myCharacter", "Cookie Monster");`
+- `querySelector` is a method that accepts a CSS selector and returns an object. Example: `const listTag = document.querySelector("ul")`
 - [Documentation for localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage#examples)
 
 ## Hints

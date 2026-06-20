@@ -2,7 +2,7 @@
 
 ## Objective
 
-Learn about Node modules and how to use them.
+Learn about external Node modules and how to use them.
 
 ## Benefits
 
