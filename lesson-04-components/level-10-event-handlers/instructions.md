@@ -1,4 +1,4 @@
-# CEvent Handlers
+# Event Handlers
 
 ## Objective
 
@@ -24,11 +24,13 @@ Handling events with React components makes them more dynamic.
 12. On the `button` tag, add the attribute `onClick={handleClick}`.
 13. View the page in the browser.
 14. Click on the button. The debugger should activate when the button is clicked.
+15. View the message in the console.
 
 ## More Information
 
 - In React, event handlers can be directly attached to HTML elements.
 - Events are attached to elements with an attribute that starts with `on`.
+- The click event can be assigned with the `onClick` attribute of an HTML tag.
 - Handler functions can be assigned to event attributes. Example: `onClick={handleClick}`
 
 ## Usage Tips
