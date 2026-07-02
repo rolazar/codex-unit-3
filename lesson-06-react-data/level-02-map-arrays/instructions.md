@@ -17,7 +17,7 @@ The `map` method of an array can be used to replace the `for` loop.
 5. View the page to make sure it runs without errors.
 6. Code the following tasks from scratch. Don't copy/paste.
 7. In the `src/components/` folder, view the file `Main.jsx`.
-8. Set up the component to track the mount phase. Use `useState`, `didMount`, `setDidMount`, `componentDidMount`, `useEffect`, an empty array of dependencies, and a `p` tag to render the value of `didMount`.
+8. Set up the component to track the mount phase. Use `useState`, `didMount`, `setDidMount`, `useEffect`, `componentDidMount`, an empty array of dependencies, and a `p` tag to render the value of `didMount`.
 9. In the `src` folder, create a `data` folder with a `data.js` file in it.
 10. In `data.js`, add `export const data`, where `data` is an array of 5 objects.
 11. Let each object have a `name` and `description`. The `name` is a subject - a person, place, or thing. The `description` should describe the subject.

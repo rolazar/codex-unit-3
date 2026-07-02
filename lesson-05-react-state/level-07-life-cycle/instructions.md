@@ -15,7 +15,7 @@ Understanding the component lifecycle will help you understand the different pha
 3. Read the information in the webpage.
 4. Try the buttons.
 5. Inspect the DOM.
-6. View `App.jsx` and `Main.jsx`. Observe how they use React variables, state, and props.
+6. View `App.jsx` and `Main.jsx` (in `src/components/`). Observe how they use React variables, state, and props.
 7. In `script.js`, create an array of messages.
 8. Let the messages explain the lifecycle of React components. Use 1 string per sentence. Use your own words. Don't copy/paste.
 9. Use `console.log` to display the array.
