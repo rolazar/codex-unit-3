@@ -19,12 +19,12 @@ There are noticeable differences in how navbars are implemented in React project
 7. Configure the project for Tailwind and TW Elements: install the packages, initialize Tailwind, edit `tailwind.config.js`, connect Tailwind and TW Elements to `style.css`, and link `style.css` to `index.html`.
 8. In the `components` folder, create the file `Navbar.jsx` to export the `Navbar` component.
 9. In `Navbar`, `return` the TW Elements HTML code for a navbar.
-10. In the `Header` component, render the `Navabar` component.
+10. In the `Header` component, render the `Navbar` component.
 11. View the page. There will be errors.
-12. Fix errors with comments, `class`, `style`, hyphenated attributes, then restart the server to fix render visual issues.
+12. Fix errors with comments, `class`, `style`, hyphenated attributes, then restart the server to fix visual/render issues.
 13. View the page to make sure it runs without errors. Observe that the navbar collapse menu doesn't work properly.
 14. In the TW Elements website, view the JavaScript code for the navbar. In React, `initTWE` must run in the mount phase, after the navbar code has mounted.
-15. Set up the `Navbar` component to track the mount phase. Use `useState`, `didMount`, `setDidMount`, `useEffect`, `componentDidMount`, and an empty array of dependencies.
+15. Set up the `Navbar` component to track the mount phase. Use `useEffect`, `componentDidMount`, and an empty array of dependencies.
 16. In `Navbar.jsx`, import the items listed in the TW Elements website, then run `initTWE` in `componentDidMount`.
 17. View the page to make sure it runs without errors. Observe that the navbar collapse menu works properly.
 18. Set up the project for multiple pages: create the `pages` folder, convert `Main` to `Home`, move `Home` to the `pages` folder, add an `About` page with content, install `react-router`, and route pages with `BrowserRouter` in `App.jsx`.
@@ -34,7 +34,7 @@ There are noticeable differences in how navbars are implemented in React project
 22. In the `Navbar` component, replace the `a` tags with the `NavLink` component.
 23. In the `NavLink` components, replace `href=` with `to=`. `NavLink` doesn't use `href`.
 24. View the page in the browser. Observe that pages load faster because they do not reload when navbar links are visited.
-25. In the `Main` component, add a `p` tag with a message that explains how to use a TW Elements navbar with `react-router` and `NavLink`.
+25. In the `Home` component, add a `p` tag with a message that explains how to use a TW Elements navbar with `react-router` and `NavLink`.
 26. View the page in the browser.
 
 ## More Information
