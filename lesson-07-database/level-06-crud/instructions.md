@@ -12,7 +12,7 @@ Your programs will be able to edit databases instead of manually editing them by
 
 1. In the `codex-unit-3` database in `https://supabase.com/`, click on the `Connect` button at the top. Select `Direct` → select `Session pooler` → take note of the `Connection string`.
 2. In the terminal, navigate to this level folder, use `npm` to initialize a project, and set the `type` to `module`. The other default settings are ok.
-3. Initialize Prisma in the terminal: `npx prisma init`. In `.schema.prisma`, change the `provider` to `prisma-client-js`. In `.env`, replace the string for `DATABASE_URL` with the `Connection string` that you noted from Supabase `Session pooler`. In the connection string, replace `[YOUR-PASSWORD]` with the database password you created (or generated).
+3. Initialize Prisma in the terminal: Install `prisma@6` and `dotenv`. `npx prisma init`. In `.schema.prisma`, change the `provider` to `prisma-client-js`. In `.env`, replace the string for `DATABASE_URL` with the `Connection string` that you noted from Supabase `Session pooler`. In the connection string, replace `[YOUR-PASSWORD]` with the database password you created (or generated).
 4. Synchronize Prisma with your database: `npx prisma db pull`. Generate a client to connect to your database: `npx prisma generate`.
 5. Make sure Prisma can connect to your database: In `script.js` import `PrismaClient`, use it to access data from the database, then `console.log` the results.
 6. In the `codex-unit-3` database in `https://supabase.com/`, create a new table called `users`.
