@@ -16,7 +16,7 @@ The Prisma web client can be used in NodeJs and in the browser, but the setup is
 4. In the VS Code terminal, navigate to this level folder, use `npm` to initialize a project, and set the `type` to `module`. The other default settings are ok.
 5. Install these packages - `prisma@6`, `dotenv`, and `prisma-json-schema-generator`.
 6. Initialize Prisma in the terminal: `npx prisma init`. In `.schema.prisma`, change the `provider` to `prisma-client-js`.
-7. Under the `client` generator, add the `jsonSchema` generator. See the configuration below for details.
+7. Under the `client` generator, add the `jsonSchema` generator. This will produce a JSON representation of your database tables. See the configuration below for details.
 8. In `.env`, replace the string for `DATABASE_URL` with the `Connection string` that you noted from Supabase `Session pooler`. In the connection string, replace `[YOUR-PASSWORD]` with the database password you created (or generated).
 9. Synchronize Prisma with your database: `npx prisma db pull`. Generate a client to connect to your database: `npx prisma generate`. Information about tables will be added to `prisma/schema.prisma`.
 10. Observe that the file `json-schema.json` was generated, and that `web-client.js` is included as part of this level.
@@ -44,6 +44,7 @@ The Prisma web client can be used in NodeJs and in the browser, but the setup is
 - `web-client.js` is included with this level.
 - The tables and fields in your Supabase database will be accessible from the Prisma web client.
 - Prisma version 6, or `prisma@6`, is compatible with more databases than the latest version of Prisma (for now).
+- The file `json-schema.json` is a JSON representation of your database tables.
 - Configuration for the `jsonSchema` generator.
 
 ```js
@@ -59,6 +60,7 @@ generator jsonSchema {
 - In `package.json`, `type: "module"` allows the use of `import` statements in JavaScript.
 - The `dotenv` package is used by Prisma to access values in `.env`.
 - The `npx` command runs NPM packages directly in the terminal.
+- [prisma-json-schema-generator](https://www.npmjs.com/package/prisma-json-schema-generator)
 - [Supabase website](https://supabase.com/)
 - [Pooler session mode](https://supabase.com/docs/guides/database/connecting-to-postgres#pooler-session-mode)
 - [Prisma website](https://www.prisma.io/)

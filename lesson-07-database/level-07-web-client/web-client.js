@@ -19421,7 +19421,8 @@ function toForgeSchema(schemaData) {
 }
 var fMap = {
   integer: "int",
-  boolean: "bool"
+  boolean: "bool",
+  number: "decimal"
 };
 function getType(type) {
   if (type instanceof Array) type = type[0];
@@ -19440,17 +19441,31 @@ function toJsonData(filePathOrJsonString) {
   return jsonData;
 }
 
+// handleError.js
+function handleError(error) {
+  let message = error.message;
+  if (message.includes("definitions")) message = "Invalid JSON schema.";
+  throw new Error(message);
+}
+
 // index.js
 async function createWebClient({ datasourceUrl, jsonSchema }) {
-  const dotenv = await import("dotenv");
-  if (dotenv) dotenv.config();
-  if (!datasourceUrl) datasourceUrl = process.env.DATABASE_URL;
-  const pool = new Mn({ connectionString: datasourceUrl });
-  const jsonData = toJsonData(jsonSchema);
-  const schema = toForgeSchema(jsonData);
-  const driver = (0, import_forge_orm2.pgDriver)(pool);
-  const client = await (0, import_forge_orm2.createDb)({ driver, schema });
-  return client;
+  try {
+    const isNodeJs = typeof window === "undefined";
+    if (isNodeJs) {
+      const dotenv = await import("dotenv");
+      dotenv.config();
+      if (!datasourceUrl) datasourceUrl = process.env.DATABASE_URL;
+    }
+    const pool = new Mn({ connectionString: datasourceUrl });
+    const jsonData = toJsonData(jsonSchema);
+    const schema = toForgeSchema(jsonData);
+    const driver = (0, import_forge_orm2.pgDriver)(pool);
+    const client = await (0, import_forge_orm2.createDb)({ driver, schema });
+    return client;
+  } catch (error) {
+    handleError(error);
+  }
 }
 export {
   createWebClient
