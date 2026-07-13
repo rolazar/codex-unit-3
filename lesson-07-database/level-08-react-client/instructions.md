@@ -38,7 +38,7 @@ Discover the difference between using the Prisma web client in NodeJs and React.
 26. Update `WebClient` to track the `update` phase: Add `useEffect`, `componentDidUpdate`, and `[password]` for the dependency list. This will call `componentDidUpdate` only when `password` changes.
 27. In the `componentDidUpdate` function, `if` there is a `password` call the `handleData` function.
 28. View the website pages and make sure they run without errors. When a valid password is provided, products should be rendered.
-29. Add `debugger` breakpoints in `WebClient`, `handleSubmit`, `handleData`, and `componentDidUpdate`. Watch `data` and `password` change values. You may need to disable `StrictMode` for a smoother experience.
+29. Add `debugger` breakpoints in `WebClient`, `handleData`, and `componentDidUpdate`. Watch `data` and `password` change values. You may need to disable `StrictMode` for a smoother experience.
 30. In the `Home` component, add a `p` tag that explains how use the Prisma web client in React to render data on a page.
 31. View the website pages and make sure they run without errors.
 
