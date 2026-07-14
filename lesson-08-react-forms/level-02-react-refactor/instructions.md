@@ -51,7 +51,7 @@ Separating large React components into smaller components helps keep the code re
 - When refactoring code, make sure it has access to its dependencies - the variables and functions it depends on.
 - The database password should not be anywhere in the website code because all website code can be viewed publicly.
 - A form can be cleared with the `reset` method. Example: `form.reset();`
-- The `Fragment` component is the same as empty brackets, except that it can accept a `key`.
+- The `Fragment` component is the same as empty tags, except that it can accept a `key`.
 - The empty tag can group adjacent elements together without adding a parent element.
 - A `key` is required when using `map` to create an array of elements.
 - Keys should be unique. Example: `const key = index + item.name;`

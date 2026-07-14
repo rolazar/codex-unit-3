@@ -24,14 +24,16 @@ Dynamically use React to perform CRUD operations on a database with an online fo
 12. In the `fieldset` tag, add a `legend` tag with the content `Create Product Data`.
 13. After the `legend` tag, add 3 TW-Elements inputs for a product `name`, `src`, and `price`. Give each input an appropriate `id` and properly match their `label` tags.
 14. After the `fieldset` tag, add a TW Elements button that can `submit` the form.
-15. View the website pages and make sure they run without errors.
-16. In the new `form` tag, add the attribute `onSubmit={handleCreate}`.
-17. After the `return` statement, create the function `handleCreate` that takes an `event` object and prevents default form behavior.
-18. In the `handleCreate` function, `if` there is a `prisma` client, do the following: Add `const form = event.target;`. Create a `data` object with properties that match the `products` table - `name`, `src`, and `price`. Set the `value` of property with `form.elements`. Add `await prisma.products.create({ data });` to create the new item. Note that property shorthand syntax is used. Add `const results = await prisma.products.findMany();` to get the updated products list. Then use `setData` to save the `results`. To clear the user input, `reset` the `form`.
-19. View the website pages and make sure they run without errors. When a product is added,
-20. Add `debugger` breakpoints in `WebClient`, `componentDidUpdate`, `handleData`, and `handleCreate`. Watch `data` and `prisma` change values. You may need to disable `StrictMode` for a smoother experience.
-21. In the `Home` component, add a `p` tag that explains how use the Prisma web client in React to create data from user input.
-22. View the website pages and make sure they run without errors.
+15. View the website pages. They should run without errors, but the TWE inputs make not be rendering properly.
+16. Initialize the TWE inputs: In the `src/hooks/` folder, add `useInputTWE.js` that exports the `useInputTWE` custom hook. Add the JavaScript code that TWE inputs need. Remeber to initialize in `componentDidMount`. Then use `useInputTWE` in `WebClient`.
+17. View the website pages and make sure they run without errors.
+18. In the new `form` tag, add the attribute `onSubmit={handleCreate}`.
+19. After the `return` statement, create the function `handleCreate` that takes an `event` object and prevents default form behavior.
+20. In the `handleCreate` function, `if` there is a `prisma` client, do the following: Add `const form = event.target;`. Create a `data` object with properties that match the `products` table - `name`, `src`, and `price`. Set the `value` of property with `form.elements`. Add `await prisma.products.create({ data });` to create the new item. Note that property shorthand syntax is used. Add `const results = await prisma.products.findMany();` to get the updated products list. Then use `setData` to save the `results`. To clear the user input, `reset` the `form`.
+21. View the website pages and make sure they run without errors. When a product is added,
+22. Add `debugger` breakpoints in `WebClient`, `componentDidUpdate`, `handleData`, and `handleCreate`. Watch `data` and `prisma` change values. You may need to disable `StrictMode` for a smoother experience.
+23. In the `Home` component, add a `p` tag that explains how use the Prisma web client in React to create data from user input.
+24. View the website pages and make sure they run without errors.
 
 ## More Information
 
