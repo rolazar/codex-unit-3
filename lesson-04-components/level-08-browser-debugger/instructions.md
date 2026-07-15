@@ -15,10 +15,10 @@ Inspecting data and running code line-by-line aide in understanding how code wor
 3. In the terminal, navigate to the `react-debugger` folder.
 4. Start the Vite server, but don't open a web browser to the URL provided by Vite. You may need to install `node_modules`.
 5. Open the VS Code Run and Debug panel.
-6. Click on the Run and Debug settings gear icon.
+6. Click on the Run and Debug settings gear icon. If you don't see the gear icon, follow the instructions below to open user settings.
 7. Find the `"launch"` property, or add it. `"launch"` should be an object.
 8. In the `"launch"` object, find the `"configurations"` property, or add it. `"configurations"` should be an array.
-9. In the array, add an object with `"name": "React Debugger"`, `"request": "launch"`, `"type": "chrome"`, `"url": "http://localhost:5173"`, and `"webRoot": "${workspaceFolder}"`
+9. In the array, add an object `{}` with `"name": "React Debugger"`, `"request": "launch"`, `"type": "chrome"`, `"url": "http://localhost:5173"`, and `"webRoot": "${workspaceFolder}"`
 10. Save the changes and view the VS Code Run and Debug panel.
 11. In the dropdown, select `React Debugger`.
 12. Click on the play button next to the dropdown. A browser should automatically open with your React project.
@@ -40,8 +40,20 @@ Inspecting data and running code line-by-line aide in understanding how code wor
 ## Usage Tips
 
 - To open the `Run and Debug` panel, go to Settings (gear icon) → Command Palette → search for `Run and Debug` → select `Run and Debug: Focus on Debug Console View`
+- To open user settings, go to Settings (gear icon) → Command Palette → search for `User Settings` → select `Open User Settings (JSON)`.
 - The `type` can be set to a popular browser such as `chrome` or `msedge`.
 - Use curly braces to insert variables into HTML. Example: `<p>{myVariable}</p>`
+- The `configurations` array should have an object like this:
+
+```json
+{
+  "name": "React Debugger",
+  "request": "launch",
+  "type": "chrome",
+  "url": "http://localhost:5173",
+  "webRoot": "${workspaceFolder}"
+}
+```
 
 ## Hints
 
