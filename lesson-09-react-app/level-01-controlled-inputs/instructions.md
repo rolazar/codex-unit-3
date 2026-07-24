@@ -10,7 +10,7 @@ Sometimes its useful to get the input value without a submit button.
 
 ## Complete these tasks
 
-1. NOTE: This level requires `prisma-template` and `spa-template` from a previous level. Complete these tasks from scratch. Do not copy/paste unless the task permits it.
+1. NOTE: This level requires `spa-template` from a previous level. Complete these tasks from scratch. Do not copy/paste unless the task permits it.
 2. Set up the website: In your system's file explorer or file picker, copy your `spa-template` folder from a previous level into this level folder. In this level folder, rename `spa-template` to `controlled-inputs`. Change the title of the website to `Control Inputs with React`. In the terminal, navigate to the `controlled-inputs` folder. Start the Vite server and open a React Debugger browser to the URL provided by Vite. View the website pages. It should work without errors after `node_modules` are installed.
 3. In the `src/components/` folder, create `Search.jsx` that exports the `Search` component. It will simulate a search form.
 4. Let `Search` return a `form` that uses a TWE input to get a product `name`. This will simulate searching for products by and price. Rename attributes appropriately. Do not include a submit button. Use the custom hook `useInputTWE` to initialize the inputs. Render `Search` in the `Home` page.
